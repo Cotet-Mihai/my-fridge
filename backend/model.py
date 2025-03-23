@@ -17,7 +17,7 @@ class Food(db.Model):
             "brand": self.brand,
             "name": self.name,
             "category": self.category,
-            "date_added": self.added,
+            "date_added": self.date_added,
             "date_expiration": self.date_expiration,
             "allergens": self.allergens
         }

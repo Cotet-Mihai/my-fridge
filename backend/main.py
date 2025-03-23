@@ -11,6 +11,7 @@ def get_foods():
 
 @app.route('/create_food', methods=['POST'])
 def create_food():
+
     brand = request.json.get('brand')
     name = request.json.get('name')
     category = request.json.get('category')
@@ -47,6 +48,7 @@ def update_food(food_id):
         return jsonify({"message": "Food not found"}), 404
 
     data = request.json
+
     food.brand = data.get("brand", food.brand)
     food.name = data.get("name", food.name)
     food.category = data.get("category", food.category)

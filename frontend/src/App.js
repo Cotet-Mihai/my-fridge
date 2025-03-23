@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Navbar from "./components/Navbar";
+import BasicTable from "./components/Table";
+import { Container, Button, Box, Typography } from '@mui/material';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <>
+          <Navbar />
+          <Container>
+              <Box sx={{margin: 5, textAlign: 'center'}}>
+                  <Typography variant={'h6'}>
+                      Alimentele tale
+                  </Typography>
+              </Box>
+              <BasicTable />
+          </Container>
+      </>
   );
 }
 
